@@ -1,0 +1,29 @@
+/* Hexlu legal pages. Palette from docs/design/TOKENS.md (dusk-plum, dusk-wine, lantern-paper, amber); light variant for light-mode readers. */
+:root { --bg:#fbf3df; --fg:#2b1d33; --muted:#5f4d58; --accent:#8a4b00; --accent2:#4a2740; --card:#fffaf0; --line:#e0cfa6; --mark:#6d3fd0; --pill:#8a4b00; --pillfg:#fffaf0; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#2b1d33; --fg:#f6e3b8; --muted:#c9b48e; --accent:#f4a93b; --accent2:#f6e3b8; --card:#4a2740; --line:#5e3352; --mark:#fff4d6; --pill:#f4a93b; --pillfg:#15101a; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+  font:16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Arabic", "Noto Sans Devanagari", "Noto Sans Thai", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", Helvetica, Arial, sans-serif; }
+main { max-width: 780px; margin: 0 auto; padding: 36px 16px 64px; }
+header { margin-bottom: 24px; }
+h1 { font-size: 30px; line-height: 1.25; margin: 0 0 8px; font-family: "Young Serif", Georgia, "Times New Roman", serif; }
+h2 { font-size: 20px; line-height: 1.35; margin: 32px 0 8px; color: var(--accent2); border-bottom: 2px solid var(--line); padding-bottom: 4px; }
+h2:first-child { margin-top: 0; }
+h3 { font-size: 17px; margin: 22px 0 4px; }
+.muted { color: var(--muted); font-size: 14px; margin: 0 0 14px; }
+a { color: var(--accent); }
+a:focus-visible { outline: 3px solid var(--mark); outline-offset: 2px; border-radius: 4px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 24px 22px; }
+ul { padding-inline-start: 22px; }
+li { margin: 4px 0; }
+.langs { display: flex; flex-wrap: wrap; gap: 6px; }
+.langs a { display: inline-block; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--card); text-decoration: none; font-size: 14px; font-weight: 600; min-height: 32px; }
+.langs a[aria-current] { background: var(--pill); border-color: var(--pill); color: var(--pillfg); }
+.skip { position: absolute; inset-inline-start: -9999px; }
+.skip:focus { inset-inline-start: 8px; top: 8px; background: var(--card); padding: 6px 10px; z-index: 5; }
+.chooser { list-style: none; padding: 0; columns: 2; column-gap: 24px; }
+.chooser li { break-inside: avoid; }
+@media (max-width: 480px) { h1 { font-size: 24px; } .card { padding: 18px 16px; } .chooser { columns: 1; } }
