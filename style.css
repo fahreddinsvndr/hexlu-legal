@@ -26,4 +26,11 @@ li { margin: 4px 0; }
 .skip:focus { inset-inline-start: 8px; top: 8px; background: var(--card); padding: 6px 10px; z-index: 5; }
 .chooser { list-style: none; padding: 0; columns: 2; column-gap: 24px; }
 .chooser li { break-inside: avoid; }
+.hero { text-align: center; margin-bottom: 20px; }
+.lead { font-size: 18px; margin: 0 auto 18px; max-width: 620px; }
+.stores { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.store { display: inline-block; padding: 12px 20px; border-radius: 12px; background: var(--pill); color: var(--pillfg); font-weight: 700; text-decoration: none; min-height: 44px; }
+.shots { display: flex; gap: 12px; justify-content: center; margin: 0 0 24px; }
+.shots img { width: 48%; max-width: 300px; height: auto; border-radius: 14px; border: 1px solid var(--line); }
+.card + .card { margin-top: 20px; }
 @media (max-width: 480px) { h1 { font-size: 24px; } .card { padding: 18px 16px; } .chooser { columns: 1; } }

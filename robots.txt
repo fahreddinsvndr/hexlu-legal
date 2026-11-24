@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fahreddinsvndr.github.io/hexlu-legal/sitemap.xml
